@@ -4,7 +4,7 @@ fiz isso para conseguir vizualizar melhor a ideia geral do algoritmo
 e o papel da recursividade, o "dividir para conquistar".
 """
 
-nums = [100, 84, 33, 95, 27, 49, 91, 38, 17, 38]
+nums = [93, 84, 33, 95, 27, 49, 91, 38, 17, 38]
 
 def order(nums):
     if len(nums) > 2:
@@ -15,10 +15,10 @@ def order(nums):
         nums_b = [] # itens maiores que o pivot
 
         for num in nums:
-                if num < pivot:
-                    nums_a.append(num)
-                else:
-                    nums_b.append(num)
+            if num < pivot:
+                nums_a.append(num)
+            else:
+                nums_b.append(num)
 
         nums = order(nums_a) + [pivot] + order(nums_b)
         return nums
