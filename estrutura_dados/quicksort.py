@@ -6,6 +6,23 @@ e o papel da recursividade, o "dividir para conquistar".
 
 nums = [93, 84, 33, 95, 27, 49, 91, 38, 17, 38]
 
+
+def order2(nums):
+    if len(nums) > 2:
+        pass
+
+    if len(nums) == 2:
+        if nums[0] > nums[1]:
+            nums[0], nums[1] = nums[1], nums[0]
+
+        return nums
+    
+    if len(nums) == 1:
+         return nums
+    
+    return []
+
+
 def order(nums):
     if len(nums) > 2:
         pivot = nums[0]        
@@ -33,6 +50,7 @@ def order(nums):
          return nums
     
     return []
+
 
 nums_ordered = order(nums)
 print(nums_ordered)
